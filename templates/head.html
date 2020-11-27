@@ -1,3 +1,5 @@
+<!-- static 경로의 파일 사용 시 작성 -->
+{% load static %}
 <head>
     <meta charset="UTF-8">
     <!-- bootstrap css -->
@@ -6,5 +8,9 @@
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <!-- default css -->
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+
     <title>파이썬 장고, 첫번째 앱!</title>
 </head>
