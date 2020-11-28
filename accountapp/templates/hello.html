@@ -1,13 +1,20 @@
 {% extends 'base.html' %}
 {% block content %}
 
-    <div style="height:30rem;background:#38df81;border-radius:1rem;margin:2rem;">
+    <div style="margin:2rem;text-align: center;">
         <div>test</div>
         <form action="/account/hello/" method="post">
             {% csrf_token %}
-            <input type="submit" class="btn btn-primary" value="POST">
+            <div>
+                <input type="text" name="data1">
+            </div>
+            <div>
+                <input type="submit" class="btn btn-primary" value="POST">
+            </div>
         </form>
 
-        <h1>{{ text }}</h1>
+        {% if new_hello_world %}
+            <h1>{{ new_hello_world.text }}</h1>
+        {% endif %}
     </div>
 {% endblock %}
